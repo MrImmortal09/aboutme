@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import useMousePosition from '../components/utils/useMousePosition';
 import { motion } from "framer-motion";
 import styles from "./page.module.scss";
-import Link from "next/link";
 
 interface MaskedElementProps {
   children: React.ReactNode;
