@@ -11,7 +11,18 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'pdf-controls': {
+          bg: "var(--background)",
+          text: "var(--foreground)",
+          button: {
+            DEFAULT: "var(--foreground)",
+            disabled: "var(--background)",
+          }
+        }
       },
+      maxHeight: {
+        'pdf-container': 'calc(100vh - 8rem)',
+      }
     },
   },
   plugins: [],
