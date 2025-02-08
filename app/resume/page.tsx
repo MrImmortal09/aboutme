@@ -7,7 +7,6 @@ const PDFViewer: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [numPages, setNumPages] = useState<number>(1);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [scale, setScale] = useState<number>(1);
 
   const calculateScale = (pageWidth: number) => {
     if (!containerRef.current) return 1;
@@ -24,7 +23,7 @@ const PDFViewer: React.FC = () => {
     const initialViewport = page.getViewport({ scale: 1 });
 
     const newScale = calculateScale(initialViewport.width);
-    setScale(newScale);
+
 
 
     const viewport = page.getViewport({ scale: newScale });
