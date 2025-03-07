@@ -16,7 +16,7 @@ interface MousePosition {
 
 const MaskedElement: React.FC<MaskedElementProps> = ({ children }) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
-  const { x , y }: MousePosition = useMousePosition();
+  const { x, y }: MousePosition = useMousePosition();
   const size: number = isHovered ? 300 : 30;
 
   return (
@@ -28,8 +28,8 @@ const MaskedElement: React.FC<MaskedElementProps> = ({ children }) => {
       }}
       transition={{ type: "tween", ease: "backOut", duration: 0.2 }}
     >
-      <div 
-        onMouseEnter={() => setIsHovered(true)} 
+      <div
+        onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {children}
@@ -41,23 +41,16 @@ const MaskedElement: React.FC<MaskedElementProps> = ({ children }) => {
 export default function Home() {
   return (
     <div>
-      <main className={styles.main} >
+      <main className={styles.main}>
         <MaskedElement>
-          <p>
-          Myself Om Swami.
-          </p>
+          <p>Myself Om Swami.</p>
         </MaskedElement>
-
         <div className={styles.body}>
           <p>
             Myself <span>Om Swami</span>.
           </p>
-          
-        
         </div>
-
       </main>
-      
     </div>
   );
 }
