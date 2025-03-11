@@ -43,11 +43,11 @@ export default function Home() {
     <div>
       <main className={styles.main}>
         <MaskedElement>
-          <p>Myself Om Swami.</p>
+          <p>Axios @IIIT Lucknow</p>
         </MaskedElement>
         <div className={styles.body}>
           <p>
-            Myself <span>Om Swami</span>.
+            Coming <span>Soon</span>.
           </p>
         </div>
       </main>
